@@ -1,0 +1,28 @@
+.logincontainer{
+    height: 432px;
+    width: 364px;
+    border-radius: 5px;
+    border: solid 1px;
+    justify-self:center;
+    margin-top: 120px;
+    padding: 20px;
+}
+.logincontainer h1{
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 43px;
+}
+.logincontainer input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+}
+.logincontainer button{
+    display: flex;
+    justify-self: center;
+    margin-top: 36px;
+    padding: 7px 19px;
+    border: solid 1px;
+    border-radius: 19px;
+    font-size: 16px;
+}

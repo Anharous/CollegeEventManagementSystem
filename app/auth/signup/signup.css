@@ -1,0 +1,46 @@
+.signup{
+    justify-self: center;
+    margin-top: 120px;
+    display:grid;
+    grid-auto-flow: column;
+    border: solid 1px;
+}
+.signupleft{
+    padding: 29px 14px 25px 39px;
+}
+.signcontent{
+    padding: 10px 0px 0px;
+}
+.welcome{
+    font-size: 55px;
+}
+.loginlink{
+    padding-top: 202px;
+}
+
+.signupContainer{
+    height: 432px;
+    width: 364px;
+    border-radius: 5px;
+    border: solid 1px;
+    padding: 20px;
+}
+.signupContainer h1{
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 24px;
+}
+.signupContainer input ,.signupContainer select{
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+}
+.signupContainer button{
+    display: flex;
+    justify-self: center;
+    margin-top: 13px;
+    padding: 7px 19px;
+    border: solid 1px;
+    border-radius: 19px;
+    font-size: 16px;
+}
