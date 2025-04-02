@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import "./admin.css"
 
 export default function AdminDashboard() {
   const router = useRouter();
@@ -90,80 +91,99 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div>
+    <div className="adminContainer">
+      <img src="/adminbg.png" alt="AdminBackground" className="adminbg" />
       <h1>Admin Dashboard</h1>
-
-      <h2>{selectedEvent ? "Edit Event" : "Add Event"}</h2>
-      <input
-        name="title"
-        placeholder="Title"
-        value={formData.title}
-        onChange={handleInputChange}
-      />
-      <input
-        name="description"
-        placeholder="Description"
-        value={formData.description}
-        onChange={handleInputChange}
-      />
-      <input
-        name="location"
-        placeholder="Location"
-        value={formData.location}
-        onChange={handleInputChange}
-      />
-      <input
-        name="date"
-        type="date"
-        value={formData.date}
-        onChange={handleInputChange}
-      />
-      <input
-        name="time"
-        type="time"
-        value={formData.time}
-        onChange={handleInputChange}
-      />
-      <input
-        name="organizer"
-        placeholder="Organizer"
-        value={formData.organizer}
-        onChange={handleInputChange}
-      />
-      <input
-        name="registrationLink"
-        placeholder="Registration Link"
-        value={formData.registrationLink}
-        onChange={handleInputChange}
-      />
-      <select
-        name="eventType"
-        value={formData.eventType}
-        onChange={handleInputChange}
-      >
-        <option>Technical</option>
-        <option>Non-Technical</option>
-        <option>Symposium</option>
-        <option>Guest Lecture</option>
-      </select>
-      <select
-        name="department"
-        value={formData.department}
-        onChange={handleInputChange}
-      >
-        <option>CSE</option>
-        <option>IT</option>
-        <option>CSBS</option>
-        <option>AIDS</option>
-        <option>AIML</option>
-        <option>ECE</option>
-        <option>EEE</option>
-        <option>MECH</option>
-      </select>
-      <button onClick={handleSubmit}>
-        {selectedEvent ? "Update Event" : "Add Event"}
-      </button>
-
+      <div className="addEventContainer">
+        <h2>{selectedEvent ? "Edit Event" : "Add Event"}</h2>
+        <label>Title</label>
+        <input
+          name="title"
+          placeholder="Title"
+          value={formData.title}
+          onChange={handleInputChange}
+        />
+        <label>Description</label>
+        <textarea
+          name="description"
+          placeholder="Description"
+          value={formData.description}
+          onChange={handleInputChange}
+          id="decp"
+        />
+        <br/>
+        <label>Location</label>
+        <input
+          name="location"
+          placeholder="Location"
+          value={formData.location}
+          onChange={handleInputChange}
+        />
+        <label>Date</label>
+        <input
+          name="date"
+          type="date"
+          value={formData.date}
+          onChange={handleInputChange}
+        />
+        <label>Time</label>
+        <input
+          name="time"
+          type="time"
+          value={formData.time}
+          onChange={handleInputChange}
+        />
+        <label>Organizer</label>
+        <input
+          name="organizer"
+          placeholder="Organizer"
+          value={formData.organizer}
+          onChange={handleInputChange}
+        />
+        <label>Registration Link</label>
+        <input
+          name="registrationLink"
+          placeholder="Registration Link"
+          value={formData.registrationLink}
+          onChange={handleInputChange}
+        />
+        <label>Event Poster</label>
+        <input
+          name="imageUrl"
+          placeholder="Event Image URL"
+          value={formData.imageUrl}
+          onChange={handleInputChange}
+        />
+        <label>Event Type</label>
+        <select
+          name="eventType"
+          value={formData.eventType}
+          onChange={handleInputChange}
+        >
+          <option>Technical</option>
+          <option>Non-Technical</option>
+          <option>Symposium</option>
+          <option>Guest Lecture</option>
+        </select>
+        <label>Department</label>
+        <select
+          name="department"
+          value={formData.department}
+          onChange={handleInputChange}
+        >
+          <option>CSE</option>
+          <option>IT</option>
+          <option>CSBS</option>
+          <option>AIDS</option>
+          <option>AIML</option>
+          <option>ECE</option>
+          <option>EEE</option>
+          <option>MECH</option>
+        </select>
+        <button onClick={handleSubmit} className="addButton">
+          {selectedEvent ? "Update Event" : "Add Event"}
+        </button>
+      </div>
       <h2>Existing Events</h2>
       {events.map((event) => (
         <div key={event._id} className="event-card">

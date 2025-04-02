@@ -1,4 +1,45 @@
-.event-card {
+.studentContainer .stdbg{
+    width: 100%;
+    height:357px;
+}
+.SearchContainer{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.eventButtons{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    padding-left: 157px;
+    gap: 20px;
+}
+.eventButtons button{
+      padding: 6px 11px;
+    border-radius: 12px;
+    border: solid 1px;
+}
+.SearchContainer input{
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 18px;
+}
+.eventContainer{
+  display: grid;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 2vw;
+  
+}
+
+.event-card{
+  /* width: 500px; */
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+/* .event-card {
   border: 1px solid #ddd;
   padding: 15px;
   margin: 10px;
@@ -13,7 +54,7 @@
   border: none;
   cursor: pointer;
   margin-top: 10px;
-}
+} */
 
 .event-card button:hover {
   background: darkgreen;
