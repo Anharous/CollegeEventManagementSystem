@@ -57,5 +57,50 @@
 } */
 
 .event-card button:hover {
-  background: darkgreen;
+  background: rgb(11, 184, 176);
+}
+.event-image{
+    width: 427px;
+    height: 294px;
+}
+.event-card h3{
+  text-align: center;
+    font-size: 25px;
+    padding: 5px 0px 15px;
+}
+.edetailsContainer{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2px;
+    padding: 9px 0px;
+}
+.eventdetails{
+  display: grid;
+}
+.eventIcondetails{
+  display: grid;
+    gap: 3px;
+    justify-content: end;
+    padding-right: 10px;
+    align-items: center;
+}
+.eventIcondetails .eventIcon{
+  margin-right: 7px;
+}
+.event-card button{
+  display: flex;
+    justify-self: center;
+    margin-top: 13px;
+    padding: 7px 19px;
+    border: solid 1px;
+    border-radius: 19px;
+    font-size: 16px;
+}
+.stdhead{
+  padding-top: 24px;
+    font-size: 57px;
+    position: absolute;
+    top: 80px;
+    left: 519px;
+    color: #e0dddd;
 }

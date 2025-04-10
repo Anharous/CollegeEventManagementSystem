@@ -20,6 +20,7 @@ export async function POST(req) {
       registrationLink,
       eventType,
       department,
+      imageUrl,
     } = body;
 
     // ✅ Validate required fields
@@ -31,7 +32,8 @@ export async function POST(req) {
       !time ||
       !organizer ||
       !eventType ||
-      !department
+      !department ||
+      !imageUrl
     ) {
       console.log("❌ Missing required fields.");
       return NextResponse.json(
@@ -56,6 +58,7 @@ export async function POST(req) {
       eventType,
       department,
       completed: false,
+      imageUrl,
     });
 
     await newEvent.save();

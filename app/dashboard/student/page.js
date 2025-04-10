@@ -29,6 +29,7 @@ export default function StudentDashboard() {
   return (
     <div className="studentContainer">
       <img src="/stdbg.png" alt="studentBackground" className="stdbg" />
+      <h1 className="stdhead">Student Dashboard</h1>
       <div className="SearchContainer">
         {/* Department Filter */}
         <select
@@ -82,29 +83,58 @@ export default function StudentDashboard() {
 
             <h3>{event.title}</h3>
             <p>{event.description}</p>
-            <p>
-              <strong>Date:</strong> {event.date} | <strong>Time:</strong>{" "}
-              {event.time}
-            </p>
-            <p>
-              <strong>Location:</strong> {event.location}
-            </p>
-            <p>
-              <strong>Organizer:</strong> {event.organizer}
-            </p>
-            <p>
-              <strong>Event Type:</strong> {event.eventType}
-            </p>
-            <p>
-              <strong>Department:</strong> {event.department}
-            </p>
+            <div className="edetailsContainer">
+              <div className="eventdetails">
+                <p>
+                  <strong>Organizer:</strong> {event.organizer}
+                </p>
+                <p>
+                  <strong>Event Type:</strong> {event.eventType}
+                </p>
+                <p>
+                  <strong>Department:</strong> {event.department}
+                </p>
+              </div>
+              <div className="eventIcondetails">
+                <p>
+                  <img
+                    src="/calender.png"
+                    alt="calender"
+                    className="eventIcon"
+                    width={23}
+                    height={21}
+                  />
+                  {event.date}
+                </p>
+                <p>
+                  <img
+                    src="/time.png"
+                    alt="clock"
+                    className="eventIcon"
+                    width={24}
+                    height={24}
+                  />
+                  {event.time}
+                </p>
+                <p>
+                  <img
+                    src="/location.png"
+                    alt="location"
+                    className="eventIcon"
+                    width={26}
+                    height={25}
+                  />
+                  {event.location}
+                </p>
+              </div>
+            </div>
             {event.registrationLink && (
               <a
                 href={event.registrationLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button>Register Here</button>
+                <button type="submit" className="Regbtn">Register Here</button>
               </a>
             )}
           </div>

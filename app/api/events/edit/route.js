@@ -4,8 +4,6 @@ import Event from "@/lib/models/event";
 
 export async function PUT(req) {
   try {
-    
-
     const {
       eventId,
       title,
@@ -17,6 +15,7 @@ export async function PUT(req) {
       registrationLink,
       eventType,
       department,
+      imageUrl,
     } = await req.json();
     await connectToDatabase();
 
@@ -32,6 +31,7 @@ export async function PUT(req) {
         registrationLink,
         eventType,
         department,
+        imageUrl,
       },
       { new: true }
     );
